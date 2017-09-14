@@ -1,7 +1,3 @@
-<app-data-entry #dataEntry> </app-data-entry>
+<input-entry (student)="setStudentInfo($event)" (printing)="setPrinting($event)"></input-entry>
+<list-entry [studentCollection]="studentCollection" [printing]="printing"> </list-entry>
 
-<app-add-entry [message]="message" (AddClicked) = "test(dataEntry.getStudent(), $event)"></app-add-entry>
-
-<app-print-entry (PrintClicked) = "listStudents()"> </app-print-entry>
-
-<app-display [printing]="printing" [studentCollection] = "studentCollection"> </app-display>
